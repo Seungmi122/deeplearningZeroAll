@@ -15,7 +15,7 @@ def min_max_scaler(data):
     numerator = data - np.min(data, 0)
     denominator = np.max(data, 0) - np.min(data, 0)
     return numerator/(denominator + 1e-7)
-    
+
 xy = min_max_scaler(xy)
 x_data = xy[:, 0:-1]
 y_data = xy[:, [-1]]
